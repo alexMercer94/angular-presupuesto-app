@@ -10,4 +10,9 @@ export class IngresoService {
     new Ingreso('Venta de coche', 500)
   ];
   constructor() { }
+
+  eliminar(ingreso: Ingreso) {
+    const indice: number = this.ingresos.indexOf(ingreso);
+    this.ingresos.splice(indice, 1);
+  }
 }
